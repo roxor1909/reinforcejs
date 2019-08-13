@@ -300,8 +300,8 @@
 
           var vv = agent.V[s];
           var ms = 100;
-          if(vv > 0) { g = 255; r = 255 - vv*ms; b = 255 - vv*ms; }
-          if(vv < 0) { g = 255 + vv*ms; r = 255; b = 255 + vv*ms; }
+          //if(vv > 0) { g = 255; r = 255 - vv*ms; b = 255 - vv*ms; }
+          //if(vv < 0) { g = 255 + vv*ms; r = 255; b = 255 + vv*ms; }
           var vcol = 'rgb('+Math.floor(r)+','+Math.floor(g)+','+Math.floor(b)+')';
           if(env.T[s] === 1) { vcol = "#AAA"; rcol = "#AAA"; }
 
