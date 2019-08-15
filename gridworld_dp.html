@@ -126,7 +126,7 @@
       },
       reward: function(s,a,ns) {
         // reward of being in s, taking action a, and ending up in ns
-        return this.Rarr[s] -1;
+        return this.Rarr[s];
       },
       nextStateDistribution: function(s,a) {
         // given (s,a) return distribution over s' (in sparse form)
