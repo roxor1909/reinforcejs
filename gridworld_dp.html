@@ -86,8 +86,8 @@
       reset: function() {
 
         // hardcoding one gridworld for now
-        this.gh = 6;
-        this.gw = 6;
+        this.gh = 4;
+        this.gw = 5;
         this.gs = this.gh * this.gw; // number of states
 
         var Rarr = R.zeros(this.gs);
@@ -98,25 +98,13 @@
           T[pos] = 1;
           Rarr[pos] = 0;
         }
-        createCliff(0);
         createCliff(1);
         createCliff(3);
-        createCliff(4);
-        createCliff(5);
+        createCliff(9)
+        createCliff(10)
         createCliff(11);
-        createCliff(13);
-        createCliff(14);
-        createCliff(15);
-        createCliff(19);
-        createCliff(20);
-        createCliff(21);
-        createCliff(22);
-        createCliff(23);
-        createCliff(29);
-        createCliff(35);
-        createCliff(33);
-        createCliff(32);
-        createCliff(30);
+        createCliff(16);
+        createCliff(18);
 
         // specify some rewards
         Rarr[31] = 1;
