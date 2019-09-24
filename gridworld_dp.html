@@ -322,7 +322,7 @@
             var pa = paa[a];
             var prob = agent.P[a*gs+s];
             if(prob === 0) { pa.attr('visibility', 'hidden'); }
-            else { pa.attr('visibility', 'visible'); }
+            else { pa.attr('visibility', 'hidden'); }
             var ss = cs/2 * prob * 0.9;
             if(a === 0) {nx=-ss; ny=0;}
             if(a === 1) {nx=0; ny=-ss;}
