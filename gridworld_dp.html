@@ -206,7 +206,7 @@
       // define a marker for drawing arrowheads
       svg.append("defs").append("marker")
         .attr("id", "arrowhead")
-        .attr("refX", 3)
+        .attr("refX", 2)
         .attr("refY", 2)
         .attr("markerWidth", 3)
         .attr("markerHeight", 4)
@@ -265,7 +265,7 @@
               .attr('x2', xcoord)
               .attr('y2', ycoord)
               .attr('stroke', 'black')
-              .attr('stroke-width', '2')
+              .attr('stroke-width', '3')
               .attr("marker-end", "url(#arrowhead)");
             pas[s].push(pa);
           }
@@ -324,8 +324,8 @@
             var pa = paa[a];
             var prob = agent.P[a*gs+s];
             if(prob === 0) { pa.attr('visibility', 'hidden'); }
-            else { pa.attr('visibility', 'hidden'); }
-            var ss = cs/2 * prob * 0.9;
+            else { pa.attr('visibility', 'visible'); }
+            var ss = cs/2 * 0.9 * 0.9;
             if(a === 0) {nx=-ss; ny=0;}
             if(a === 1) {nx=0; ny=-ss;}
             if(a === 2) {nx=0; ny=ss;}
