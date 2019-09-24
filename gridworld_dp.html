@@ -198,8 +198,8 @@
       var gw = env.gw; // width in cells
       var gs = env.gs; // total number of cells
 
-      var w = 600;
-      var h = 600;
+      var w = 305;
+      var h = 240;
       svg = d3elt.append('svg').attr('width', w).attr('height', h)
         .append('g').attr('transform', 'scale(1)');
 
@@ -234,14 +234,14 @@
             .attr('width', cs)
             .attr('fill', '#FFF')
             .attr('stroke', 'black')
-            .attr('stroke-width', 2);
+            .attr('stroke-width', 3);
           rs[s] = r;
 
           // reward text
           var tr = g.append('text')
             .attr('x', xcoord + 5)
             .attr('y', ycoord + 55)
-            .attr('font-size', 10)
+            .attr('font-size', 20)
             .text('');
           trs[s] = tr;
 
@@ -252,6 +252,7 @@
           var tv = g.append('text')
             .attr('x', xcoord + 5)
             .attr('y', ycoord + 20)
+            .attr('font-size', 20)
             .text('');
           tvs[s] = tv;
 
@@ -306,7 +307,8 @@
           var rv = env.Rarr[s];
           var tr = trs[s];
           if(rv !== 0) {
-            tr.text('R ' + rv.toFixed(1))
+            tr.text('Z')
+            //tr.text('R ' + rv.toFixed(1))
           }
 
           // skip rest for cliff
