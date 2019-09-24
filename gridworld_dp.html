@@ -252,7 +252,7 @@
           var tv = g.append('text')
             .attr('x', xcoord + 5)
             .attr('y', ycoord + 20)
-            .attr('font-size', 20)
+            .attr('font-size', 10)
             .text('');
           tvs[s] = tv;
 
@@ -316,7 +316,7 @@
 
           // write value
           var tv = tvs[s];
-          tv.text(agent.V[s].toFixed(2));
+          tv.text(agent.V[s].toFixed(5));
 
           // update policy arrows
           var paa = pas[s];
