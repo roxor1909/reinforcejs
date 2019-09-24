@@ -323,7 +323,8 @@
           for(var a=0;a<4;a++) {
             var pa = paa[a];
             var prob = agent.P[a*gs+s];
-            if(prob === 0) { pa.attr('visibility', 'hidden'); }
+            // hide arrows if the probability is zero or the goal cell is rendered
+            if(prob === 0 || s === 19) { pa.attr('visibility', 'hidden'); }
             else { pa.attr('visibility', 'visible'); }
             var ss = cs/2 * 0.9 * 0.9;
             if(a === 0) {nx=-ss; ny=0;}
