@@ -252,7 +252,7 @@
           var tv = g.append('text')
             .attr('x', xcoord + 5)
             .attr('y', ycoord + 20)
-            .attr('font-size', 10)
+            .attr('font-size', 20)
             .text('');
           tvs[s] = tv;
 
@@ -310,13 +310,17 @@
             tr.text('Z')
             //tr.text('R ' + rv.toFixed(1))
           }
+          //Draw Start position
+          if (s==2) {
+            tr.text('S')
+          }
 
           // skip rest for cliff
           if(env.T[s] === 1) continue;
 
           // write value
           var tv = tvs[s];
-          tv.text(agent.V[s].toFixed(2));
+          tv.text(agent.V[s].toFixed(0));
 
           // update policy arrows
           var paa = pas[s];
