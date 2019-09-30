@@ -310,6 +310,10 @@
             tr.text('Z')
             //tr.text('R ' + rv.toFixed(1))
           }
+          //Write start position
+          if(s === 2) {
+            tr.text('S')
+          }
 
           // skip rest for cliff
           if(env.T[s] === 1) continue;
